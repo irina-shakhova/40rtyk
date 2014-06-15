@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>40RTYK</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css" />
+    <![endif]-->
+    <script type="text/javascript">
+        $(function($) {
+            $( "#accordion-menu" ).accordion({
+                heightStyle: "content",
+                collapsible: true,
+                icons: false,
+                header: "span",
+                active: false
+            });
+            $('#gallery-nav').flexslider({
+                animation: "slide",
+                controlNav: false,
+                directionNav: true,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 156,
+                asNavFor: '#gallery-slider'
+            });
+
+            $('#gallery-slider').flexslider({
+                animation: "fade",
+                controlNav: false,
+                directionNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#gallery-nav",
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
+            });
+        })
+    </script>
+</head>
+
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="#"><img src="images/logo.png" alt="40RTYK" class="logo" /></a>
+            </div>
+            <div class="header-right">
+                <div class="hr-top">
+                    <div class="social">
+                        <a href="#" class="icon fb">Facebook</a>
+                        <a href="#" class="icon tw">Twitter</a>
+                        <a href="#" class="icon yt">YouTube</a>
+                    </div>
+                    <div class="subscribe">
+                        <span class="label">Sign up to our mailing list:</span>
+                        <form action="#" method="post" class="subscribe-form">
+                            <input type="text" class="subscribe-row" value="Email Address" />
+                            <input type="submit" class="subscribe-button" value="Sign up" />
+                        </form>
+                    </div>
+
+                </div>
+                <ul class="main-menu menu">
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">40k PLUS</a></li>
+                    <li><a href="#">40K GLOBE</a></li>
+                    <li><a href="#">40K CONSULTING</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="#">events</a></li>
+                    <li><a href="#">donate</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-inner">
+            <div class="center">
+                <div class="crumbs">40K Foundation <span class="arrow red">&nbsp;</span> 40K Globe <span class="arrow red">&nbsp;</span> Example of a Gallery Page</div>
+
+                <div class="sidebar">
+                    <h2 class="section-title">40K Globe</h2>
+                    <ul class="submenu menu" id="accordion-menu">
+                        <li><a href="#">About 40K Globe</a></li>
+                        <li><a href="#">Get Involved</a></li>
+                        <li><a href="#">The Social Entrepreneurs</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Universities</a></li>
+                        <li><a href="#">Stories from Globers</a></li>
+                        <li>
+                            <span>Testimonies</span>
+                            <ul class="sub-submenu menu">
+                                <li><a href="#">Globers</a></li>
+                                <li><a href="#">Universities</a></li>
+                                <li><a href="#">Parents</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content">
+                    <div class="inner">
+                        <h1 class="page-title">An Example of a Gallery Page</h1>
+                        <div class="gallery-slider-wrp">
+                            <div id="gallery-slider" class="flexslider gallery-slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="images/content-gallery/slide1.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide2.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide3.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide4.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide5.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide6.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide7.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide8.jpg" alt="" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="gallery-nav" class="flexslider gallery-nav">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="images/content-gallery/slide1-preview.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide2-preview.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide3-preview.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide4-preview.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide5-preview.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide6-preview.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide7-preview.jpg" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="images/content-gallery/slide8-preview.jpg" alt="" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2>H2 Heading goes here</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-section-wrp">
+                <div class="footer-section">
+                    <h2 class="section-title">40K Foundation</h2>
+                    <ul class="footer-menu menu">
+                        <li><a href="#">About 40K</a></li>
+                        <li><a href="#">40K Plus</a></li>
+                        <li><a href="#">40K Globe</a></li>
+                        <li><a href="#">40K Foundation</a></li>
+                        <li><a href="#">40K Foundation</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 class="section-title">Stay in Touch</h2>
+                    <p>Subscribe to the 40K Newsletter and receive the latest news, updates and events direct to your inbox.</p>
+                    <div class="subscribe redskin">
+                        <form action="#" method="post" class="subscribe-form">
+                            <input type="text" class="subscribe-row" value="Email Address" />
+                            <input type="submit" class="subscribe-button" value="Sign up" />
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-section last">
+                    <h2 class="section-title">Socialise with 40K</h2>
+                </div>
+
+            </div>
+
+
+            <div class="copyright">© The 40K Foundation Australia Limited 2013. (ABN 46 141 849 229)</div>
+            <img src="images/logo-black.png" width="163" height="40" alt="40RTYK" class="footer-logo" />
+        </div>
+    </div>
+</div>
+</body>
+</html>

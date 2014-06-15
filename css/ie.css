@@ -1,0 +1,51 @@
+.clearfix, .header-inner, .hr-top, .center, .home-entry-list, entry-list, .mission-block, .footer, .footer-section-wrp {
+    *zoom: 1;
+}
+
+.subscribe, .social, .search-top, .radio_fake {
+    *display: inline;
+    *zoom: 1;
+}
+
+body {
+    font-size: 15px;
+}
+
+.content {
+    line-height: 21px;
+}
+
+.content blockquote {
+    font-size: 21px;
+    line-height: 28px;
+}
+
+.search-top .search-row {
+    background-color: #000;
+}
+
+.social .icon {
+    *display: block;
+    *float: left;
+}
+
+.carousel, .cwrp {
+    *height: 582px;
+    *overflow: hidden;
+}
+
+.header-inner {
+    *padding-bottom: 0px;
+}
+
+.subscribe-form .subscribe-row {
+    background: #000;
+}
+
+.content h2 {
+    line-height: 31px;
+}
+
+input.error {
+    border: solid 1px #ea5349;
+}

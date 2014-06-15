@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>40RTYK</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.checkbox.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css" />
+    <![endif]-->
+    <script type="text/javascript">
+        $(function($) {
+            $('input.check').checkbox({
+                mode: 'radio',
+                callback: function() {
+                    var el = $(this),
+                        amount = $("#amount");
+
+                    if(el.hasClass("radio_yes") && el.find("input").attr("id") == "d4") {
+                        amount.prop("disabled", false);
+                    } else {
+                        amount.prop("disabled", true);
+                    }
+                }
+            });
+            $( "#accordion-menu" ).accordion({
+                heightStyle: "content",
+                collapsible: true,
+                icons: false,
+                header: "span",
+                active: false
+            });
+        });
+    </script>
+</head>
+
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="#"><img src="images/logo.png" alt="40RTYK" class="logo" /></a>
+            </div>
+            <div class="header-right">
+                <div class="hr-top">
+                    <div class="social">
+                        <a href="#" class="icon fb">Facebook</a>
+                        <a href="#" class="icon tw">Twitter</a>
+                        <a href="#" class="icon yt">YouTube</a>
+                    </div>
+                    <div class="subscribe">
+                        <span class="label">Sign up to our mailing list:</span>
+                        <form action="#" method="post" class="subscribe-form">
+                            <input type="text" class="subscribe-row" value="Email Address" />
+                            <input type="submit" class="subscribe-button" value="Sign up" />
+                        </form>
+                    </div>
+
+                </div>
+                <ul class="main-menu menu">
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">40k PLUS</a></li>
+                    <li><a href="#">40K GLOBE</a></li>
+                    <li><a href="#">40K CONSULTING</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="#">events</a></li>
+                    <li><a href="#">donate</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-inner">
+            <div class="center">
+                <div class="crumbs">40K Foundation <span class="arrow red">&nbsp;</span> 40K Globe <span class="arrow red">&nbsp;</span> Example of a Map Page</div>
+
+                <div class="sidebar">
+                    <h2 class="section-title">40K Globe</h2>
+                    <ul class="submenu menu" id="accordion-menu">
+                        <li><a href="#">About 40K Globe</a></li>
+                        <li><a href="#">Get Involved</a></li>
+                        <li>
+                            <span>The Social Entrepreneurs</span>
+                            <ul class="sub-submenu menu">
+                                <li><a href="#">Globers</a></li>
+                                <li><a href="#">Universities</a></li>
+                                <li><a href="#">Parents</a></li>
+                                <li><a href="#">Universities</a></li>
+                                <li><a href="#">Parents</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Universities</a></li>
+                        <li><a href="#">Stories from Globers</a></li>
+                        <li>
+                            <span>Testimonies</span>
+                            <ul class="sub-submenu menu">
+                                <li><a href="#">Globers</a></li>
+                                <li><a href="#">Universities</a></li>
+                                <li><a href="#">Parents</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content">
+                    <div class="inner">
+                        <h1 class="page-title">Jukebox Donation</h1>
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+                        <div class="donate-form-wrp">
+                            <form action="" method="post" class="donate-form">
+                                <div class="note"><span class="required">*</span> Denotes Mandatory Field</div>
+                                <fieldset class="f1">
+                                    <h2 class="underline-title">Personal Details</h2>
+                                    <div class="form-line">
+                                        <label for="first-name" class="form-label">First Name:</label>
+                                        <input type="text" name="first-name" id="first-name" class="form-input" />
+                                        <span class="required">*</span>
+                                    </div>
+                                    <div class="form-line">
+                                        <label for="last-name" class="form-label">Last Name:</label>
+                                        <input type="text" name="last-name" id="last-name" class="form-input" />
+                                        <span class="required">*</span>
+                                    </div>
+                                    <div class="form-line">
+                                        <label for="email" class="form-label">Email Address:</label>
+                                        <input type="text" name="email" id="email" class="form-input error" />
+                                        <span class="required">*</span>
+                                        <span class="error">Invalid Email Address</span>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="f2">
+                                    <h2 class="underline-title">Donation Amount</h2>
+                                    <div class="form-line">
+                                        <input type="radio" name="d1" id="d1" class="check" checked="checked" />
+                                        <label for="d1">$10.00 Donation</label>
+                                    </div>
+                                    <div class="form-line">
+                                        <input type="radio" name="d1" id="d2" class="check" />
+                                        <label for="d2">$25.00 Donation</label>
+                                    </div>
+                                    <div class="form-line">
+                                        <input type="radio" name="d1" id="d3" class="check" />
+                                        <label for="d3">$50.00 Donation</label>
+                                    </div>
+                                    <div class="form-line">
+                                        <input type="radio" name="d1" id="d4" class="check" />
+                                        <label for="d4">Other Amount</label>
+                                        <div class="amount-wrp"><label>$</label> <input type="text" id="amount" class="amount" disabled="disabled" /></div>
+                                    </div>
+                                </fieldset>
+                                <input type="submit" value="Make a Donation" class="red-button" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-section-wrp">
+                <div class="footer-section">
+                    <h2 class="section-title">40K Foundation</h2>
+                    <ul class="footer-menu menu">
+                        <li><a href="#">About 40K</a></li>
+                        <li><a href="#">40K Plus</a></li>
+                        <li><a href="#">40K Globe</a></li>
+                        <li><a href="#">40K Foundation</a></li>
+                        <li><a href="#">40K Foundation</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 class="section-title">Stay in Touch</h2>
+                    <p>Subscribe to the 40K Newsletter and receive the latest news, updates and events direct to your inbox.</p>
+                    <div class="subscribe redskin">
+                        <form action="#" method="post" class="subscribe-form">
+                            <input type="text" class="subscribe-row" value="Email Address" />
+                            <input type="submit" class="subscribe-button" value="Sign up" />
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-section last">
+                    <h2 class="section-title">Socialise with 40K</h2>
+                </div>
+
+            </div>
+
+
+            <div class="copyright">© The 40K Foundation Australia Limited 2013. (ABN 46 141 849 229)</div>
+            <img src="images/logo-black.png" width="163" height="40" alt="40RTYK" class="footer-logo" />
+        </div>
+    </div>
+</div>
+</body>
+</html>
